@@ -1,14 +1,12 @@
-# ETH+AVAX Assessment 4
+# ETH+AVAX Assessment 4 || DegenToken
 
 ## Overview
 
-This program is a ERC20 token deployed on Avalanche Fuji Testnet and written in Solidity, a programming language used for developing smart contracts on the blockchain. The contract details are listed below :
+DegenToken is an ERC20-compliant token with additional features such as minting, burning, and redeeming tokens for NFT accessories. This smart contract is written in Solidity and designed to run on the Ethereum blockchain.
 
-- Token Name: Degen 
-- Token Symbol: DGN
-- Decimals: 10
-- Total Supply: 0 (initialized value)
-
+## Features
+- ERC20 compliant token
+- Minting by the contract owner
 - Minting new tokens: The platform should be able to create new tokens and distribute them to players as rewards. Only the owner can mint tokens.
 - Transferring tokens: Players should be able to transfer their tokens to others.
 - Redeeming tokens: Players should be able to redeem their tokens for items in the in-game store.
@@ -47,11 +45,16 @@ This program is a ERC20 token deployed on Avalanche Fuji Testnet and written in 
 
 ### Executing program
 
-(1) Make sure you are connected to the Avalanche Fuji Testnet in your Metamask and have some test AVAX.
+(1) Open Remix:
 
-(2) To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+    Go to Remix.
 
-(3) Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension. Copy and paste the code from DegenToken.sol file into your file:
+(2) Create a New File:
+
+  - In the left sidebar, click on the "+" icon to create a new file.
+  - Name it DegenToken.sol.
+
+(3) Copy and paste the code from DegenToken1.sol file into your file:
 
 (4) To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to latest solidity version (or another compatible version), and then click on the "Compile" button.
 
@@ -59,12 +62,17 @@ This program is a ERC20 token deployed on Avalanche Fuji Testnet and written in 
 
 (6) Select the your contract from the dropdown menu, and then click on the "Deploy" button.
 
-(7) Once the contract is deployed, you can interact with it by calling the mint, burn function, transfer and much more.
+(7) After deploying, you can interact with the contract directly from Remix:
 
+  - Mint Tokens: Call the mint function with the recipient's address and the amount of tokens.
+  - Check Balance: Call the balanceOf function with an address to check its token balance.
+  - Transfer Tokens: Call the transfer function with the recipient's address and the amount of tokens.
+  - Burn Tokens: Call the burn function with the amount of tokens to be burned.
+  - Redeem Tokens: Call the redeem function with the NFT accessory ID to redeem tokens for an accessory.
 ## Author
 
-- Michael John
-  - GitHub: [@rolamj](https://github.com/rolamj)
+- Konrad Orata
+  - GitHub: (https://github.com/izKonrad)
 
 ## License
 
