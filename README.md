@@ -19,7 +19,7 @@ DegenToken is an ERC20-compliant token with additional features such as minting,
 
 1. 'mint' function (only owner) to mint new DGN tokens.
 
-2. 'storeNftAccessory' function (only owner) to add new NFT items for redemption.
+2. 'burn' function to burn DEGEN tokens.
 
 3. 'balanceOf' function to check the token balance of a specific address.
 
@@ -29,9 +29,9 @@ DegenToken is an ERC20-compliant token with additional features such as minting,
 
 6. 'transferFrom' function to transfer DEGEN tokens on behalf of another address.
 
-7. 'burn' function to burn DEGEN tokens.
+7. 'getRedeemedItem' function to check what item you redeeemed.
 
-8. 'redeem' function to redeem DEGEN tokens for NFTs.
+8. 'redeemWeapon' function to redeem DEGEN tokens for NFTs.
 
 9. 'symbol' you can get the abbreviation of the token's name.
 
