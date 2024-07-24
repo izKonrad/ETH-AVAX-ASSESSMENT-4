@@ -7,7 +7,6 @@ DegenToken is an ERC20-compliant token with additional features such as minting,
 ## Features
 - ERC20 compliant token
 - Minting by the contract owner
-- Minting new tokens: The platform should be able to create new tokens and distribute them to players as rewards. Only the owner can mint tokens.
 - Transferring tokens: Players should be able to transfer their tokens to others.
 - Redeeming tokens: Players should be able to redeem their tokens for items in the in-game store.
 - Checking token balance: Players should be able to check their token balance at any time.
@@ -19,35 +18,27 @@ DegenToken is an ERC20-compliant token with additional features such as minting,
 
 1. 'mint' function (only owner) to mint new DGN tokens.
 
-2. 'burn' function to burn DEGEN tokens.
+2. 'burn' Allows users to burn a specified amount of DGN tokens from their own balance.
 
-3. 'balanceOf' function to check the token balance of a specific address.
+3. 'getBalance' Returns the balance of DGN tokens for the caller's address.
+ 
+4. 'transferto' Allows users to transfer a specified amount of DGN tokens to another address.
 
-4. 'transfer' function to send DEGEN tokens from your address to another address.
+5. 'redeemToken' This function enables users to redeem DGN tokens for in-game weapons. Here's how it works:
+The user invokes the redeemTokens function, specifying the weapon they wish to redeem (e.g., TwoHandedSword, Spear, etc.). The contract then verifies if the user possesses enough DGN tokens to cover the weapon's cost, as listed in the itemPrices mapping. If the user has sufficient tokens, the contract increases the user's inventory for the chosen weapon and burns the necessary amount of tokens from the user's balance. A message is logged to indicate the successful redemption, detailing the weapon name and the number of tokens redeemed.
 
-5. 'approve' function to allow another address to spend a specific amount of DEGEN tokens on your behalf.
+## Redeem Process
+The redeem process follows these steps:
 
-6. 'transferFrom' function to transfer DEGEN tokens on behalf of another address.
-
-7. 'getRedeemedItem' function to check what item you redeeemed.
-
-8. 'redeemWeapon' function to redeem DEGEN tokens for NFTs.
-
-9. 'symbol' you can get the abbreviation of the token's name.
-
-10. 'name' you can know the name of the token.
-
-11. 'totalSupply' you can know the total amount of tokens present.
-
-12. 'decimals' you can know the total amount of decimal places present.
-
-13. 'owner' you can know the address of the owner.
+1. The user calls redeemTokens with the desired weapon type.
+2. The contract checks the user's balance and the weapon's price.
+3. If the user has enough tokens, the contract updates the user's inventory and burns the required tokens.
+4. The contract logs a success message.
 
 ### Executing program
 
 (1) Open Remix:
-
-    Go to Remix.
+Remix.
 
 (2) Create a New File:
 
